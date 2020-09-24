@@ -1,0 +1,54 @@
+{
+  "name": "@whppt/layouts",
+  "version": "0.0.0",
+  "description": "Whppt layouts plugin.",
+  "repository": "whpptjs/layouts",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "lucasjm <lucas@sveltestudios.com>"
+    }
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/module.js",
+  "scripts": {
+    "dev": "nuxt example",
+    "lint": "eslint --ext .js,.vue .",
+    "release": "yarn test && standard-version && git push --follow-tags && npm publish"
+  },
+  "dependencies": {
+    "@whppt/nuxt": "^1.0.42",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-nuxt": "^1.0.1",
+    "eslint-import-resolver-webpack": "^0.12.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "lodash": "^4.17.20",
+    "prettier": "^2.1.2",
+    "vuex": "^3.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/module-test-utils": "latest",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "latest",
+    "eslint": "latest",
+    "glob": "^7.1.6",
+    "husky": "latest",
+    "nuxt-edge": "latest",
+    "standard-version": "latest"
+  },
+  "peerDependencies": {
+    "@whppt/nuxt": "2.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
