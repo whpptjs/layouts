@@ -1,26 +1,26 @@
 <template>
   <div>
-    <h5 class="text-sm font-bold">Split with gap</h5>
+    <!-- component values exceeding min-max -->
     <whppt-text-input
-      v-model="selectedComponent.value.width"
-      class="whppt-textBox--margin-top-20"
+      id="split-content-width"
+      :value="selectedComponent.value.width"
       info="Sets the first column's width. Calculated in 12ths, e.g. 2 = 2/12, 5 = 5/12"
-      placeholder=""
+      placeholder="12"
       type="number"
       min="0"
       max="10"
-      :label="selectedComponent.property"
+      label="First column width"
       @input="clampInput($event, 'width', 0, 10)"
     />
     <whppt-text-input
-      v-model="selectedComponent.value.gap"
-      class="whppt-textBox--margin-top-20"
+      id="split-content-gap"
+      :value="selectedComponent.value.gap"
       info="Sets the width of the gap between the columns. Calculated in 12ths, e.g. 2 = 2/12, 5 = 5/12"
-      placeholder=""
+      placeholder="5"
       type="number"
       min="0"
       max="5"
-      label="Gap"
+      label="Gap width"
       @input="clampInput($event, 'gap', 0, 5)"
     />
   </div>
@@ -28,7 +28,7 @@
 
 <script>
 import { clamp } from 'lodash';
-import { mapState } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 import WhpptTextInput from '@whppt/nuxt/lib/components/ui/Input.vue';
 
@@ -38,18 +38,11 @@ export default {
   computed: {
     ...mapState('whppt-nuxt/editor', ['selectedComponent']),
   },
-  mounted() {
-    this.selectedComponent.width = this.selectedComponent.width || '5';
-    this.selectedComponent.gap = this.selectedComponent.gap || '0';
-  },
   methods: {
+    ...mapActions('whppt-nuxt/editor', ['setSelectedComponentState']),
     clampInput(input, property, min, max) {
-      if (input) {
-        this.selectedComponent.value[property] = `${clamp(input, min, max)}`;
-      }
+      if (input) this.setSelectedComponentState({ value: clamp(input, min, max), path: property });
     },
   },
 };
 </script>
-
-<style scoped></style>

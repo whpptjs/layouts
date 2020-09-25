@@ -6,23 +6,11 @@
 [![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 
-> A layout plugin for @whppt/nuxt. Implement configurable layouts in seconds. 
+> Whppt layouts plugin.
 
 [📖 **Release Notes**](./CHANGELOG.md)
 
-## Table of Contents
-
-- [Features](#features)
-- [Installation](#features)
-- [Usage](#usage)
-- [Options](#options)
-- [License](#license)
-
-## Features
-- Split Content Component
-
-
-## Usage
+## Setup
 
 1. Add `@whppt/layouts` dependency to your project
 
@@ -43,7 +31,6 @@ yarn add @whppt/layouts # or npm install @whppt/layouts
   ]
 }
 ```
-## Options
 
 ## Development
 
