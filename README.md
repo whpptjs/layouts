@@ -55,8 +55,6 @@ yarn add @whppt/layouts # or npm install @whppt/layouts
 
 [MIT License](./LICENSE)
 
-Copyright (c) lucasjm <lucas@sveltestudios.com>
-
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/@whppt/layouts/latest.svg
 [npm-version-href]: https://npmjs.com/package/@whppt/layouts

@@ -20,14 +20,7 @@
   },
   "dependencies": {
     "@whppt/nuxt": "^1.0.42",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-import-resolver-nuxt": "^1.0.1",
-    "eslint-import-resolver-webpack": "^0.12.2",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-nuxt": "^1.0.0",
-    "eslint-plugin-prettier": "^3.1.4",
     "lodash": "^4.17.20",
-    "prettier": "^2.1.2",
     "vuex": "^3.5.1"
   },
   "devDependencies": {
@@ -40,9 +33,16 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "latest",
     "eslint": "latest",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-nuxt": "^1.0.1",
+    "eslint-import-resolver-webpack": "^0.12.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "glob": "^7.1.6",
     "husky": "latest",
     "nuxt-edge": "latest",
+    "prettier": "^2.1.2",
     "standard-version": "latest"
   },
   "peerDependencies": {
