@@ -49,6 +49,7 @@
     "@whppt/nuxt": "2.x"
   },
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
     "access": "public"
   }
 }

@@ -19,8 +19,7 @@
 - [License](#license)
 
 ## Features
-- Split Content Component
-
+- [Split Content Component](./docs/SplitContent.md)
 
 ## Usage
 
@@ -43,13 +42,16 @@ yarn add @whppt/layouts # or npm install @whppt/layouts
   ]
 }
 ```
+
+3. create a nuxt plugin, eg. `~/plugins/layouts.js`
+```js
+import Vue from 'vue'
+import layouts from '@whppt/layouts'
+
+Vue.use(layouts)
+```
+
 ## Options
-
-## Development
-
-1. Clone this repository
-2. Install dependencies using `yarn install` or `npm install`
-3. Start development server using `npm run dev`
 
 ## License
 
