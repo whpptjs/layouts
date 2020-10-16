@@ -51,6 +51,24 @@ import layouts from '@whppt/layouts'
 Vue.use(layouts)
 ```
 
+4. Make a few updates to your `~/nuxt.config.js` file.
+```js
+export default {
+  /* Rest of your config */
+  plugins: {
+    '~/plugins/layouts.js',
+    /* Rest of your plugins */
+  },
+  /*
+   * Note: the transpile step is only required if using the Vue.use() method,
+   * if using Vue.component() to register the components omit the following.
+   */
+  build: {
+    transpile: ['@whppt/layouts'],
+  },
+}
+```
+
 ## Options
 
 ## License

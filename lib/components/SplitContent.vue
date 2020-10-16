@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-split-content="content" :data-property="content.property">
+    <div v-split-content="content">
       <span v-if="activeMenuItem" class="whppt-layouts__settings">Split Content Settings</span>
       <div class="whppt-layouts__split-content">
         <w-content

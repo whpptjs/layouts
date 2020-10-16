@@ -19,7 +19,6 @@
     "release": "yarn test && standard-version && git push --follow-tags && npm publish"
   },
   "dependencies": {
-    "@whppt/nuxt": "^1.0.42",
     "lodash": "^4.17.20",
     "vuex": "^3.5.1"
   },
