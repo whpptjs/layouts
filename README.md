@@ -22,7 +22,6 @@
 - [Split Content Component](./docs/SplitContent.md)
 
 ## Usage
-
 1. Add `@whppt/layouts` dependency to your project
 
 ```bash
@@ -68,6 +67,8 @@ export default {
   },
 }
 ```
+
+5. Check the documentation for any layout components you wish to use on how to register and initialise each component in whppt.
 
 ## Options
 

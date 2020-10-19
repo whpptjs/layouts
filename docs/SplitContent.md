@@ -10,11 +10,17 @@ const splitContent = {
      * The prefix (default: 'layout-') can be changed via the @whppt/layouts module options.
      */  
     componentType: 'layout-split-content',
+    /*
+     * The init function is responsible for initialising the components content object.
+     * The below content object is initialised with 4 properties (left, right, width and gap),
+     * Theses are all required properties on the content object to be used within the split contents editors. 
+     */
     init: ({ $set }, content = {}) => {
-      if (!content.width) $set(content, 'width', 6);
-      if (!content.left) $set(content, 'left', []);
-      if (!content.gap) $set(content, 'gap', 0);
-      if (!content.right) $set(content, 'right', []);
+      if (!content.width) $set(content, 'width', 6); // width: { type: Number, default: 6 }
+      if (!content.gap) $set(content, 'gap', 0); // gap: { type: Number, default: 0 }
+      if (!content.left) $set(content, 'left', []); // left: { type: Array, default: () => [] }
+      if (!content.right) $set(content, 'right', []); // right: { type: Array, default: () => [] }
+
       return content;
     },
 };
@@ -23,5 +29,5 @@ const splitContent = {
 ### Props
 | Name    | Type   | Default   | required | Description                                                          |
 |---------|--------|-----------|----------|----------------------------------------------------------------------|
-| content | Object | undefined | true     | The Whppt content item passed down from the whppt Content component. |
+| content | Object | <code>{<br/>&nbsp;&nbsp;content: {<br>&nbsp;&nbsp;&nbsp;&nbsp;left: [],<br/>&nbsp;&nbsp;&nbsp;&nbsp;right: [],<br/>&nbsp;&nbsp;&nbsp;&nbsp;width: 6,<br/>&nbsp;&nbsp;&nbsp;&nbsp;gap: 0<br/>&nbsp;&nbsp;}<br/>}<code/>  | true | The Whppt content item passed down from the whppt Content component. |
 
