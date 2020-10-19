@@ -1,6 +1,6 @@
 {
   "name": "@whppt/layouts",
-  "version": "1.0.0-rc1",
+  "version": "1.0.0-rc2",
   "description": "Whppt layouts plugin.",
   "repository": "whpptjs/layouts",
   "license": "MIT",
@@ -48,7 +48,6 @@
     "@whppt/nuxt": "2.x"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/",
     "access": "public"
   }
 }
