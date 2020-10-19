@@ -29,5 +29,7 @@ const splitContent = {
 ### Props
 | Name    | Type   | Default   | required | Description                                                          |
 |---------|--------|-----------|----------|----------------------------------------------------------------------|
-| content | Object | <code>{<br/>&nbsp;&nbsp;content: {<br>&nbsp;&nbsp;&nbsp;&nbsp;left: [],<br/>&nbsp;&nbsp;&nbsp;&nbsp;right: [],<br/>&nbsp;&nbsp;&nbsp;&nbsp;width: 6,<br/>&nbsp;&nbsp;&nbsp;&nbsp;gap: 0<br/>&nbsp;&nbsp;}<br/>}<code/>  | true | The Whppt content item passed down from the whppt Content component. |
+| content | Object | <code>{<br />&nbsp;&nbsp;left: [],<br />&nbsp;&nbsp;right: [],<br />&nbsp;&nbsp;width: 6,<br />&nbsp;&nbsp;gap: 0<br/>}<code/> | true | The Whppt content item passed down from the whppt Content component. |
+
+
 
