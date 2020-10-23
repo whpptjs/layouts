@@ -2,7 +2,7 @@
 
 ## v1.0.0-rc3
 ### Fixes
-- Implement the new dedicated Number input within [@whppt/nuxt]() to solve Vuex mutation issues.
+- Implement the new dedicated Number input within [@whppt/nuxt](https://github.com/whpptjs/whppt-nuxt) to solve Vuex mutation issues.
 
 ## v1.0.0-rc2
 ### Features
