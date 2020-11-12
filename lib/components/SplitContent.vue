@@ -7,12 +7,14 @@
           class="whppt-layouts__content whppt-layouts__content--left"
           :class="`md:w-${content.width}/12`"
           :content-items="content.left"
+          :container="false"
         />
         <div v-if="content.gap" class="whppt-layouts__gap" :class="`w-${content.gap}/12`">&nbsp;</div>
         <w-content
           class="whppt-layouts__content whppt-layouts__content--right"
           :class="`md:w-${12 - content.width - content.gap}/12`"
           :content-items="content.right"
+          :container="false"
         />
       </div>
     </div>
