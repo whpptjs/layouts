@@ -1,5 +1,11 @@
 <template>
   <div>
+    <!-- This comment is in place in the case that you are using purgecss to optimise bundle size in production environments.
+      See: https://tailwindcss.com/docs/optimizing-for-production
+      PURGE CLASSES to be included for dynamic width:
+      md:w-1/12 md:w-2/12 md:w-3/12 md:w-4/12 md:w-5/12 md:w-6/12 md:w-7/12 md:w-8/12 md:w-9/12 md:w-10/12 md:w-11/12 md:w-12/12
+      w-1/12 w-2/12 w-3/12 w-4/12 w-5/12 w-6/12 w-7/12 w-8/12 w-9/12 w-10/12 w-11/12 w-12/12
+    -->
     <div v-split-content="content">
       <span v-if="activeMenuItem" class="whppt-layouts__settings">Split Content Settings</span>
       <div class="whppt-layouts__split-content">
