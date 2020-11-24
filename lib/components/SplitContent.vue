@@ -14,6 +14,7 @@
           :class="`md:w-${content.width}/12`"
           :content-items="content.left"
           :container="false"
+          :whitelist="whitelist"
         />
         <div v-if="content.gap" class="whppt-layouts__gap" :class="`w-${content.gap}/12`">&nbsp;</div>
         <w-content
@@ -21,6 +22,7 @@
           :class="`md:w-${12 - content.width - content.gap}/12`"
           :content-items="content.right"
           :container="false"
+          :whitelist="whitelist"
         />
       </div>
     </div>
@@ -36,6 +38,9 @@ export default {
     content: {
       type: Object,
       required: true,
+    },
+    whitelist: {
+      type: Array,
     },
   },
   computed: {
