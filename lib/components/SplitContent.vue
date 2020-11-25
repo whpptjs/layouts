@@ -41,6 +41,7 @@ export default {
     },
     whitelist: {
       type: Array,
+      default: []
     },
   },
   computed: {
