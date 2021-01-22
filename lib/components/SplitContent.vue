@@ -8,7 +8,13 @@
     -->
     <div v-split-content="content">
       <span v-if="activeMenuItem" class="whppt-layouts__settings">Split Content Settings</span>
-      <div class="whppt-layouts__split-content">
+      <div
+        class="whppt-layouts__split-content"
+        :class="{
+          'whppt-layouts__split-content--reverse-desktop': content.reverse.desktop,
+          'whppt-layouts__split-content--reverse-mobile': content.reverse.mobile,
+        }"
+      >
         <w-content
           class="whppt-layouts__content whppt-layouts__content--left"
           :class="`md:w-${content.width}/12`"
@@ -60,9 +66,21 @@ $gray-500: #a0aec0;
   color: $gray-500;
 }
 
+.whppt-layouts__split-content {
+  display: flex;
+  flex-direction: column;
+  &--reverse-mobile {
+    flex-direction: column-reverse;
+  }
+}
+
 @media (min-width: 768px) {
   .whppt-layouts__split-content {
     display: flex;
+    flex-direction: row;
+    &--reverse-desktop {
+      flex-direction: row-reverse;
+    }
   }
 }
 </style>
