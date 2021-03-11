@@ -45,7 +45,7 @@ export default {
     },
   },
   computed: {
-    ...mapState('whppt-nuxt/editor', ['activeMenuItem']),
+    ...mapState('whppt/editor', ['activeMenuItem']),
   },
 };
 </script>

@@ -26,16 +26,16 @@
 <script>
 import { mapActions, mapState } from 'vuex';
 
-import WhpptNumberInput from '@whppt/nuxt/lib/components/ui/NumberInput.vue';
+import WhpptNumberInput from '@whppt/nuxt/lib/components/ui/components/NumberInput.vue';
 
 export default {
   name: 'SplitContentGapEditor',
   components: { WhpptNumberInput },
   computed: {
-    ...mapState('whppt-nuxt/editor', ['selectedComponent']),
+    ...mapState('whppt/editor', ['selectedComponent']),
   },
   methods: {
-    ...mapActions('whppt-nuxt/editor', ['setSelectedComponentState']),
+    ...mapActions('whppt/editor', ['setSelectedComponentState']),
   },
 };
 </script>
