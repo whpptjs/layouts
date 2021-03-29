@@ -6,7 +6,7 @@
   "license": "MIT",
   "contributors": [
     {
-      "name": "lucasjm <lucas@sveltestudios.com>"
+      "name": "svelte <info@sveltestudios.com>"
     }
   ],
   "files": [
@@ -14,9 +14,10 @@
   ],
   "main": "lib/module.js",
   "scripts": {
-    "dev": "nuxt example",
     "lint": "eslint --ext .js,.vue .",
-    "release": "yarn test && standard-version && git push --follow-tags && npm publish"
+    "release:patch": "standard-version --release-as patch && git push --follow-tags && yarn publish",
+    "release:minor": "standard-version --release-as minor && git push --follow-tags && yarn publish",
+    "release:major": "standard-version --release-as major && git push --follow-tags && yarn publish"
   },
   "dependencies": {
     "lodash": "^4.17.20",
