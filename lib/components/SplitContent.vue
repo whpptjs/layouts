@@ -11,15 +11,15 @@
       <div class="whppt-layouts__split-content">
         <w-content
           class="whppt-layouts__content whppt-layouts__content--left"
-          :class="`md:w-${content.width}/12`"
+          :class="`md:${leftColumnWidth}`"
           :content-items="content.left"
           :container="false"
           :whitelist="whitelist"
         />
-        <div v-if="content.gap" class="whppt-layouts__gap" :class="`w-${content.gap}/12`">&nbsp;</div>
+        <div v-if="content.gap" class="whppt-layouts__gap" :class="gapWidth">&nbsp;</div>
         <w-content
           class="whppt-layouts__content whppt-layouts__content--right"
-          :class="`md:w-${12 - content.width - content.gap}/12`"
+          :class="`md:${rightColumnWidth}`"
           :content-items="content.right"
           :container="false"
           :whitelist="whitelist"
@@ -44,8 +44,30 @@ export default {
       default: () => [],
     },
   },
+  data: () => ({
+    paddingSizes: {
+      1: 4,
+      2: 16,
+      3: 24,
+      4: 32,
+      5: 48,
+      6: 64,
+    },
+  }),
   computed: {
     ...mapState('whppt/editor', ['activeMenuItem']),
+    leftColumnWidth() {
+      if (this.content.usePixelGap) return 'w-full';
+      return `w-${this.content.width}/12`;
+    },
+    rightColumnWidth() {
+      if (this.content.usePixelGap) return 'w-full';
+      return `w-${12 - this.content.width - this.content.gap}/12`;
+    },
+    gapWidth() {
+      if (this.content.usePixelGap) return `px-${this.paddingSizes[this.content.gap] || 0}`;
+      return `w-${this.content.gap}/12`;
+    },
   },
 };
 </script>
