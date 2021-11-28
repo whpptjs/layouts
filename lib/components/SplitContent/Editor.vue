@@ -21,7 +21,7 @@
       :id="`${$options._scopeId}-split-content-width`"
       :value="selectedComponent.value.width"
       label="First column width"
-      placeholder="12"
+      placeholder="6"
       min="0"
       max="10"
       info="Sets the first column's width. Calculated in 12ths, e.g. 2 = 2/12, 5 = 5/12"
@@ -31,7 +31,7 @@
       :id="`${$options._scopeId}-split-content-gap`"
       :value="selectedComponent.value.gap"
       :label="`Gap ${usePixelGap ? '' : 'column'} width`"
-      placeholder="5"
+      placeholder="1"
       min="0"
       max="5"
       :info="`Sets the width of the gap between the columns. 

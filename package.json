@@ -46,7 +46,7 @@
     "standard-version": "latest"
   },
   "peerDependencies": {
-    "@whppt/nuxt": "^2.0.0-rc60"
+    "@whppt/nuxt": "^2.0.0-rc61"
   },
   "publishConfig": {
     "access": "public"
