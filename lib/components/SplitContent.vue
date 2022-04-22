@@ -1,5 +1,10 @@
 <template>
-  <div>
+  <div
+    :class="{
+      'reverse-desktop': content.reverse.desktop,
+      'reverse-mobile': content.reverse.mobile,
+    }"
+  >
     <!-- This comment is in place in the case that you are using purgecss to optimise bundle size in production environments.
       See: https://tailwindcss.com/docs/optimizing-for-production
       PURGE CLASSES to be included for dynamic width:
@@ -85,6 +90,30 @@ $gray-500: #a0aec0;
 @media (min-width: 768px) {
   .whppt-layouts__split-content {
     display: flex;
+  }
+}
+
+.whppt-layouts__split-content {
+  display: flex;
+  flex-direction: column;
+}
+.reverse-mobile {
+  .whppt-layouts__split-content {
+    flex-direction: column-reverse;
+  }
+}
+@screen md {
+  .whppt-layouts__split-content {
+    display: flex;
+    flex-direction: row;
+  }
+  .reverse-mobile .whppt-layouts__split-content {
+    flex-direction: row;
+  }
+  .reverse-desktop {
+    .whppt-layouts__split-content {
+      flex-direction: row-reverse;
+    }
   }
 }
 </style>

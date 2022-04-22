@@ -38,6 +38,26 @@
       ${usePixelGap ? '' : 'Calculated in 12ths, e.g. 2 = 2/12, 5 = 5/12'}`"
       @input="setSelectedComponentState({ value: $event, path: 'gap' })"
     />
+    <div>
+      <whppt-checkbox
+        label="Toggle Full Width"
+        :value="selectedComponent.value.fullWidth"
+        style="padding: 1rem 0"
+        @change="setSelectedComponentState({ value: $event, path: 'fullWidth' })"
+      ></whppt-checkbox>
+      <whppt-checkbox
+        label="Reverse Desktop Content"
+        :value="selectedComponent.value.reverse.desktop"
+        style="padding: 1rem 0"
+        @change="setSelectedComponentState({ value: $event, path: 'reverse.desktop' })"
+      ></whppt-checkbox>
+      <whppt-checkbox
+        label="Reverse Mobile Content"
+        :value="selectedComponent.value.reverse.mobile"
+        style="padding: 1rem 0"
+        @change="setSelectedComponentState({ value: $event, path: 'reverser.mobile' })"
+      ></whppt-checkbox>
+    </div>
   </div>
 </template>
 
@@ -46,13 +66,14 @@ import { mapActions, mapState } from 'vuex';
 
 import WhpptNumberInput from '@whppt/nuxt/lib/components/ui/components/NumberInput.vue';
 import WhpptButton from '@whppt/nuxt/lib/components/ui/components/Button.vue';
+import WhpptCheckbox from '@whppt/nuxt/lib/components/ui/components/Checkbox.vue';
 
 import Columns from '../icons/Columns';
 import Padding from '../icons/Padding';
 
 export default {
   name: 'SplitContentGapEditor',
-  components: { WhpptNumberInput, WhpptButton, Columns, Padding },
+  components: { WhpptNumberInput, WhpptButton, Columns, Padding, WhpptCheckbox },
   computed: {
     ...mapState('whppt/editor', ['selectedComponent']),
     usePixelGap() {
