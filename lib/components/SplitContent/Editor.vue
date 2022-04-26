@@ -39,12 +39,12 @@
       @input="setSelectedComponentState({ value: $event, path: 'gap' })"
     />
     <div>
-      <whppt-checkbox
+      <!-- <whppt-checkbox
         label="Toggle Full Width"
         :value="selectedComponent.value.fullWidth"
         style="padding: 1rem 0"
         @change="setSelectedComponentState({ value: $event, path: 'fullWidth' })"
-      ></whppt-checkbox>
+      ></whppt-checkbox> -->
       <whppt-checkbox
         label="Reverse Desktop Content"
         :value="selectedComponent.value.reverse.desktop"
@@ -55,7 +55,7 @@
         label="Reverse Mobile Content"
         :value="selectedComponent.value.reverse.mobile"
         style="padding: 1rem 0"
-        @change="setSelectedComponentState({ value: $event, path: 'reverser.mobile' })"
+        @change="setSelectedComponentState({ value: $event, path: 'reverse.mobile' })"
       ></whppt-checkbox>
     </div>
   </div>
