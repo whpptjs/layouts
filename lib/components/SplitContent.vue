@@ -1,4 +1,5 @@
 <template>
+<div :class="{container}">
   <div
     :class="{
       'reverse-desktop': content.reverse.desktop,
@@ -18,18 +19,21 @@
           class="whppt-layouts__content whppt-layouts__content--left"
           :class="`md:${leftColumnWidth}`"
           :content-items="content.left"
+          :inSplitContent="true"
           :container="false"
           :whitelist="whitelist"
         />
-        <div v-if="content.gap" class="whppt-layouts__gap" :class="gapWidth">&nbsp;</div>
+        <div v-if="content.gap && content.gap !== '0'" class="whppt-layouts__gap" :class="gapWidth">&nbsp;</div>
         <w-content
           class="whppt-layouts__content whppt-layouts__content--right"
           :class="`md:${rightColumnWidth}`"
           :content-items="content.right"
+          :inSplitContent="true"
           :container="false"
           :whitelist="whitelist"
         />
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -48,6 +52,7 @@ export default {
       type: Array,
       default: () => [],
     },
+    container: { type: Boolean, default: false }
   },
   data: () => ({
     paddingSizes: {
