@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/whpptjs/layouts/compare/v1.0.1...v1.0.2) (2022-05-02)
+
+
+### Bug Fixes
+
+* formatting fixes ([df7bde0](https://github.com/whpptjs/layouts/commit/df7bde02fcddf47b999e9abf92bc361057528e19))
+* remove console.log ([2c5db50](https://github.com/whpptjs/layouts/commit/2c5db50f8921bae2f940078279b30b8f95bafa3e))
+
 ## [1.0.0](https://github.com/whpptjs/layouts/compare/v1.0.0-rc9...v1.0.0) (2022-04-26)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@whppt/layouts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Whppt layouts plugin.",
   "repository": "whpptjs/layouts",
   "license": "MIT",
@@ -15,9 +15,9 @@
   "main": "lib/module.js",
   "scripts": {
     "lint": "eslint --ext .js,.vue .",
-    "release:patch": "standard-version --release-as patch && git push --follow-tags && yarn publish",
-    "release:minor": "standard-version --release-as minor && git push --follow-tags && yarn publish",
-    "release:major": "standard-version --release-as major && git push --follow-tags && yarn publish"
+    "release:patch": "standard-version --release-as patch && yarn publish && git push --follow-tags",
+    "release:minor": "standard-version --release-as minor && yarn publish && git push --follow-tags",
+    "release:major": "standard-version --release-as major && yarn publish && git push --follow-tags"
   },
   "dependencies": {
     "lodash": "^4.17.20",
