@@ -14,7 +14,10 @@
     -->
       <div v-split-content="content">
         <span v-if="activeMenuItem" class="whppt-layouts__settings">Split Content Settings</span>
-        <div class="whppt-layouts__split-content">
+        <div
+          class="whppt-layouts__split-content"
+          :class="{ 'whppt-layouts__split-content--match-heights': content.matchHeight }"
+        >
           <w-content
             class="whppt-layouts__content whppt-layouts__content--left"
             :class="`md:${leftColumnWidth}`"

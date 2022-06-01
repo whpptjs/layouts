@@ -57,6 +57,12 @@
         style="padding: 1rem 0"
         @change="setSelectedComponentState({ value: $event, path: 'reverse.mobile' })"
       ></whppt-checkbox>
+      <whppt-checkbox
+        label="Match both sides content height"
+        :value="selectedComponent.value.matchHeight"
+        style="padding: 1rem 0"
+        @change="setSelectedComponentState({ value: $event, path: 'matchHeight' })"
+      ></whppt-checkbox>
     </div>
   </div>
 </template>
