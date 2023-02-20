@@ -110,7 +110,7 @@ $gray-500: #a0aec0;
     flex-direction: column-reverse;
   }
 }
-@screen md {
+@media (min-width: 768px) {
   .whppt-layouts__split-content {
     display: flex;
     flex-direction: row;
